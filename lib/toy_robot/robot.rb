@@ -34,6 +34,19 @@ module ToyRobot
       end
     end
 
+    def next_move
+      case @direction
+      when "NORTH"
+        [@east, @north + 1]
+      when "SOUTH"
+        [@east, @north - 1]
+      when "EAST"
+        [@east + 1, @north]
+      when "WEST"
+        [@east -1, @north]
+      end
+    end
+
     def turn_left
       # _______First Implementation _____
       # @direction = case @direction
